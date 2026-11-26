@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Objev, jak algoritmy převádějí nápady na přesné postupy. Nauč se jejich vlastnosti, větvení i vývojové diagramy.">
+  <meta name="theme-color" content="#f7f6f0">
+  <title>Fanda Lav — algoritmy od nápadu k postupu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#uvod" aria-label="Fanda Lav — úvod">
+      <span class="brand-mark" aria-hidden="true">FL</span>
+      <span class="brand-name">Fanda <span class="brand-light">Lav</span></span>
+    </a>
+    <nav aria-label="Hlavní navigace">
+      <a href="#zaklady">Základy</a>
+      <a href="#diagramy">Vývojové diagramy</a>
+      <a href="#kvíz">Kvíz</a>
+    </nav>
+    <a class="header-link" href="#kvíz">Vyzkoušet se <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="uvod">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse-dot"></span> ZÁKLADY ALGORITMIZACE</p>
+        <h1>Každý chytrý<br>nápad má <span class="highlight">svůj postup.</span></h1>
+        <p class="hero-lede">Algoritmus mění „nějak to udělej“ na jasný plán, který zvládne člověk i počítač. Pojď zjistit, jak takový plán navrhnout.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#zaklady">Pustit se do toho <span aria-hidden="true">↓</span></a>
+          <span class="reading-time"><span aria-hidden="true">◷</span> 4 min čtení</span>
+        </div>
+        <div class="hero-note">
+          <span class="note-icon" aria-hidden="true">✳</span>
+          <p><strong>Malý příklad:</strong> připravit čaj je algoritmus — když na sebe kroky správně navazují.</p>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Ilustrace posloupnosti kroků algoritmu">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-label label-input"><span class="mini-shape input-shape"></span> VSTUP</div>
+        <div class="art-label label-process"><span class="mini-shape process-shape"></span> POSTUP</div>
+        <div class="art-label label-output"><span class="mini-shape output-shape"></span> VÝSLEDEK</div>
+        <div class="art-card">
+          <div class="art-card-top"><span></span><span></span><span></span><small>ČAJ.EXE</small></div>
+          <div class="art-code">
+            <p><b>01</b> <span>voda</span> ← ohřej</p>
+            <p><b>02</b> sáček ← vlož</p>
+            <p><b>03</b> <em>čekej</em>(3 min)</p>
+            <p><b>04</b> <strong>hotovo!</strong> <i>✓</i></p>
+          </div>
+          <div class="art-card-bottom"><span class="status-pip"></span> 4 KROKY · 1 VÝSLEDEK</div>
+        </div>
+        <span class="spark spark-a" aria-hidden="true">✳</span>
+        <span class="spark spark-b" aria-hidden="true">✦</span>
+      </div>
+      <div class="hero-index"><span>01</span><span class="index-line"></span><span>04</span></div>
+    </section>
+
+    <section class="intro-band">
+      <div class="section-wrap intro-inner">
+        <p class="eyebrow">JEDNODUŠE ŘEČENO</p>
+        <p class="intro-statement">Algoritmus je <span>přesný návod</span> k vyřešení úlohy — krok za krokem, od zadání až k výsledku.</p>
+        <p class="intro-aside">Recept, cesta na výlet i počítačový program. Všechny mohou být algoritmem.</p>
+      </div>
+    </section>
+
+    <section class="section-wrap fundamentals section-pad" id="zaklady">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 — DOBRÝ ALGORITMUS</p>
+          <h2>Šest vlastností,<br>které drží <span>směr.</span></h2>
+        </div>
+        <p class="heading-aside">Nestačí jen vědět, co chceme. Záleží i na tom, jak cestu popíšeme.</p>
+      </div>
+      <div class="properties-grid">
+        <article class="property-card property-lime">
+          <span class="property-number">01</span><span class="property-icon" aria-hidden="true">↻</span>
+          <h3>Konečnost</h3><p>Postup musí někde začít a po omezeném počtu kroků skončit.</p>
+          <span class="property-tag">MÁ CÍL</span>
+        </article>
+        <article class="property-card property-blue">
+          <span class="property-number">02</span><span class="property-icon" aria-hidden="true">✓</span>
+          <h3>Správnost</h3><p>Poctivě provedené kroky vedou ke správnému řešení úlohy.</p>
+          <span class="property-tag">DÁVÁ SMYSL</span>
+        </article>
+        <article class="property-card property-coral">
+          <span class="property-number">03</span><span class="property-icon" aria-hidden="true">◇</span>
+          <h3>Jednoznačnost</h3><p>Každý krok i každé rozhodnutí mají jasný význam.</p>
+          <span class="property-tag">BEZ HÁDÁNÍ</span>
+        </article>
+        <article class="property-card property-lilac">
+          <span class="property-number">04</span><span class="property-icon" aria-hidden="true">∞</span>
+          <h3>Obecnost</h3><p>Řeší celou skupinu podobných úloh, nejen jeden konkrétní příklad.</p>
+          <span class="property-tag">VÍC NEŽ JEDNOU</span>
+        </article>
+        <article class="property-card property-yellow">
+          <span class="property-number">05</span><span class="property-icon" aria-hidden="true">⟳</span>
+          <h3>Opakovatelnost</h3><p>Při stejných vstupech a podmínkách vede ke stejnému výsledku.</p>
+          <span class="property-tag">STEJNÝ VSTUP, STEJNÝ VÝSTUP</span>
+        </article>
+        <article class="property-card property-white">
+          <span class="property-number">06</span><span class="property-icon" aria-hidden="true">Aa</span>
+          <h3>Srozumitelnost</h3><p>Člověk, který postup čte, dokáže pochopit, co má udělat.</p>
+          <span class="property-tag">ČITELNĚ</span>
+        </article>
+      </div>
+      <aside class="tip-strip">
+        <span class="tip-star" aria-hidden="true">✳</span>
+        <p><strong>Pozor na okrajové případy.</strong> Před dělením ověř, že jmenovatel není nula. U odmocniny v reálných číslech zkontroluj, že je výraz pod ní nezáporný.</p>
+        <span class="tip-arrow" aria-hidden="true">↗</span>
+      </aside>
+    </section>
+
+    <section class="diagram-section section-pad" id="diagramy">
+      <div class="section-wrap">
+        <div class="section-heading diagram-heading">
+          <div>
+            <p class="eyebrow">02 — NAKRESLI SI TO</p>
+            <h2>Vývojový diagram<br>ukáže <span>cestu.</span></h2>
+          </div>
+          <p class="heading-aside">Tvary zastupují různé druhy kroků. Šipky ukazují, co následuje.</p>
+        </div>
+        <div class="diagram-layout">
+          <div class="flowchart" role="img" aria-label="Vývojový diagram: začátek, načti číslo, je číslo větší než nula, zobraz kladné nebo nekladné a konec.">
+            <svg viewBox="0 0 540 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L6,3 z" fill="#22271f"/>
+                </marker>
+              </defs>
+              <path class="flow-line" d="M270 66 V100 M270 150 V184 M270 252 V284 M270 330 V405" marker-end="url(#arrow)"/>
+              <path class="flow-line" d="M342 218 H430 V300 M430 346 V405" marker-end="url(#arrow)"/>
+              <text class="flow-label" x="354" y="207">ANO</text>
+              <text class="flow-label" x="282" y="273">NE</text>
+              <rect class="flow-terminal" x="213" y="24" width="114" height="42" rx="21"/>
+              <text class="flow-text" x="270" y="51">START</text>
+              <polygon class="flow-io" points="230,100 328,100 310,150 212,150"/>
+              <text class="flow-text" x="270" y="130">Načti číslo</text>
+              <polygon class="flow-decision" points="270,184 342,218 270,252 198,218"/>
+              <text class="flow-text flow-small" x="270" y="222">číslo &gt; 0?</text>
+              <polygon class="flow-io" points="200,284 340,284 322,330 182,330"/>
+              <text class="flow-text" x="261" y="312">Zobraz „nekladné“</text>
+              <polygon class="flow-io" points="374,300 504,300 486,346 356,346"/>
+              <text class="flow-text flow-small" x="430" y="328">Zobraz „kladné“</text>
+              <rect class="flow-terminal" x="213" y="405" width="114" height="42" rx="21"/>
+              <text class="flow-text" x="270" y="432">KONEC</text>
+              <rect class="flow-terminal" x="373" y="405" width="114" height="42" rx="21"/>
+              <text class="flow-text" x="430" y="432">KONEC</text>
+            </svg>
+          </div>
+          <div class="diagram-notes">
+            <p class="eyebrow">ČTI SYMBOLY</p>
+            <div class="symbol-note"><span class="symbol sample-terminal" aria-hidden="true"></span><p><strong>Ovál</strong><br>Začátek nebo konec</p></div>
+            <div class="symbol-note"><span class="symbol sample-io" aria-hidden="true"></span><p><strong>Kosodélník</strong><br>Vstup nebo výstup</p></div>
+            <div class="symbol-note"><span class="symbol sample-process" aria-hidden="true"></span><p><strong>Obdélník</strong><br>Výpočet či zpracování</p></div>
+            <div class="symbol-note"><span class="symbol sample-decision" aria-hidden="true"></span><p><strong>Kosočtverec</strong><br>Rozhodnutí podle podmínky</p></div>
+            <div class="flow-note"><span aria-hidden="true">↳</span><p>Větve rozhodnutí vždy označ, třeba <b>ANO</b> a <b>NE</b>. Tím je jasné, kam pokračovat.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap process-section section-pad">
+      <div class="process-copy">
+        <p class="eyebrow">03 — OD NÁPADU K ŘEŠENÍ</p>
+        <h2>Nejdřív plán.<br>Potom <span>program.</span></h2>
+        <p>Počítačový program je zápis algoritmu ve zvoleném programovacím jazyce. Když si postup ujasníš předem, snáz odhalíš chybějící kroky i výjimky.</p>
+        <a class="text-link" href="#kvíz">Ověřit, co už vím <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="steps-card">
+        <div class="step-row"><span class="step-index">01</span><span class="step-icon" aria-hidden="true">⌕</span><div><h3>Rozuměj zadání</h3><p>Co dostáváš a co má být výsledkem?</p></div><span class="step-check" aria-hidden="true">✓</span></div>
+        <div class="step-row"><span class="step-index">02</span><span class="step-icon" aria-hidden="true">⌘</span><div><h3>Navrhni kroky</h3><p>Seřaď činnosti a promysli rozhodnutí.</p></div><span class="step-check" aria-hidden="true">✓</span></div>
+        <div class="step-row"><span class="step-index">03</span><span class="step-icon" aria-hidden="true">⚒</span><div><h3>Otestuj příklady</h3><p>Vyzkoušej běžné i krajní vstupy.</p></div><span class="step-check" aria-hidden="true">✓</span></div>
+        <div class="step-row"><span class="step-index">04</span><span class="step-icon" aria-hidden="true">⌨</span><div><h3>Přepiš do kódu</h3><p>Až teď zvol programovací jazyk.</p></div><span class="step-check" aria-hidden="true">✓</span></div>
+      </div>
+    </section>
+
+    <section class="quiz-section section-pad" id="kvíz">
+      <div class="section-wrap quiz-layout">
+        <div class="quiz-intro">
+          <p class="eyebrow">04 — RYCHLÁ KONTROLA</p>
+          <h2>Kolik kroků<br>už <span>znáš?</span></h2>
+          <p>Pět otázek. Žádné známky — jen malá kontrola, jestli algoritmické myšlení dává smysl.</p>
+          <div class="quiz-stamp"><span aria-hidden="true">✳</span> ZVLÁDNEŠ TO</div>
+        </div>
+        <form class="quiz-form" id="quiz-form">
+          <fieldset class="quiz-question" data-answer="b">
+            <legend><span>01</span> Co nejlépe popisuje algoritmus?</legend>
+            <label><input type="radio" name="q1" value="a"><span>Libovolný nápad bez konkrétních kroků.</span></label>
+            <label><input type="radio" name="q1" value="b"><span>Jasný postup vedoucí k řešení úlohy.</span></label>
+            <label><input type="radio" name="q1" value="c"><span>Jen program napsaný v počítači.</span></label>
+          </fieldset>
+          <fieldset class="quiz-question" data-answer="c">
+            <legend><span>02</span> Který tvar značí rozhodnutí?</legend>
+            <label><input type="radio" name="q2" value="a"><span>Ovál</span></label>
+            <label><input type="radio" name="q2" value="b"><span>Obdélník</span></label>
+            <label><input type="radio" name="q2" value="c"><span>Kosočtverec</span></label>
+          </fieldset>
+          <fieldset class="quiz-question" data-answer="a">
+            <legend><span>03</span> Co zajišťuje, že postup po čase skončí?</legend>
+            <label><input type="radio" name="q3" value="a"><span>Konečnost</span></label>
+            <label><input type="radio" name="q3" value="b"><span>Obecnost</span></label>
+            <label><input type="radio" name="q3" value="c"><span>Srozumitelnost</span></label>
+          </fieldset>
+          <fieldset class="quiz-question" data-answer="b">
+            <legend><span>04</span> Co je důležité zkontrolovat před dělením?</legend>
+            <label><input type="radio" name="q4" value="a"><span>Že čitatel je sudý.</span></label>
+            <label><input type="radio" name="q4" value="b"><span>Že jmenovatel není nula.</span></label>
+            <label><input type="radio" name="q4" value="c"><span>Že výsledek je celé číslo.</span></label>
+          </fieldset>
+          <fieldset class="quiz-question" data-answer="c">
+            <legend><span>05</span> Kdy se opakovatelný algoritmus chová stejně?</legend>
+            <label><input type="radio" name="q5" value="a"><span>Když se spustí na stejném počítači.</span></label>
+            <label><input type="radio" name="q5" value="b"><span>Když jej spustí stejný člověk.</span></label>
+            <label><input type="radio" name="q5" value="c"><span>Při stejných vstupech a podmínkách.</span></label>
+          </fieldset>
+          <div class="quiz-actions">
+            <button class="button button-lime" type="submit">Zkontrolovat odpovědi <span aria-hidden="true">→</span></button>
+            <button class="reset-button" type="reset">Začít znovu</button>
+          </div>
+          <p class="quiz-feedback" id="quiz-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="sources-section section-pad" id="zdroje">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">POUŽITÉ PODKLADY</p>
+            <h2>Vědomosti mají<br>své <span>zdroje.</span></h2>
+          </div>
+          <p class="heading-aside">Výklad a grafika na této stránce jsou zpracované vlastními slovy a vlastními prostředky.</p>
+        </div>
+        <ol class="sources-list">
+          <li><span>01</span><p><strong>Jana Pšenčíková: Algoritmizace.</strong> Computer Media, 2007. ISBN 80-86686-80-9. Využito jako studijní zdroj k základním pojmům.</p></li>
+          <li><span>02</span><p><strong>Vývojové diagramy.</strong> Studijní materiál PDF předaný zadavatelem; autor a rok vydání nejsou uvedeni.</p></li>
+          <li><span>03</span><p><strong>Algoritmizace – zpracování textu.</strong> Studijní materiál Markdown předaný zadavatelem; autor a datum nejsou uvedeni.</p></li>
+        </ol>
+        <p class="sources-note">Úplné údaje jsou v souboru <code>citace.md</code>. Zadání pro GitHub Copilot je v souboru <code>prompt-copilot.md</code>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-wrap footer-inner">
+      <a class="brand footer-brand" href="#uvod" aria-label="Fanda Lav — úvod"><span class="brand-mark" aria-hidden="true">FL</span><span class="brand-name">Fanda <span class="brand-light">Lav</span></span></a>
+      <p>Jasné kroky. Chytré nápady. <span aria-hidden="true">✳</span></p>
+      <div class="footer-links"><a href="#zdroje">Zdroje a citace</a><a href="#uvod">Zpět nahoru ↑</a></div>
+    </div>
+  </footer>
+</body>
+</html>
